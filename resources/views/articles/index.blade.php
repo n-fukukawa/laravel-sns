@@ -3,8 +3,10 @@
 @section('title', '記事一覧')
 
 @section('content')
-{{-- <div class="container mx-auto"> --}}
 <div>
-    @each('components.card', $articles, 'item')
+    @foreach ($articles as $item)
+        <x-card :item="$item" />
+    @endforeach
 </div>
 @endsection
+

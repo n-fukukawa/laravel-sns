@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>
-        @yield('title')
-    </title>
+    <title>@yield('title')</title>
 </head>
 <body>
     <header>
-        @include('components.nav')
+        <x-nav />
     </header>
-    <main>
-        <div class="container mx-auto">
-            @yield('content')
-        </div>
+    <main class="container mx-auto mt-10">
+         @yield('content')
     </main>
 </body>
 </html>

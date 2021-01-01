@@ -15,5 +15,33 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', [ArticleController::class, 'index']);
+Route::get('/', [ArticleController::class, 'index'])
+    ->name('articles.index');
+
+Route::resource('/articles', ArticleController::class)
+    ->except(['index'])->middleware('auth');
+
+Auth::routes();
+/**
+ * Method, Path, Controller, Action
+ * 
+ * ユーザー登録画面
+ * GET, /register, App/Http/Controllers/Auth/RegisterController, showResistrationForm
+ * 
+ * ユーザー登録フォーム送信
+ * POST, /register, App/Http/Controllers/Auth/RegisterController, register
+ * 
+ * ログアウト
+ * POST, /logout, App/Http/Controllers/Auth/LoginController, logout
+ * 
+ * ログインフォーム画面
+ * GET, /login, App/Http/Controllers/Auth/LoginController, showLoginForm
+ * 
+ * ログインフォーム送信
+ * POST, /login, App/Http/Controllers/Auth/LoginController, login
+ * 
+ */
+
+
+
 
