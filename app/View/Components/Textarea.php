@@ -11,13 +11,10 @@ class Textarea extends Component
      *
      * @return void
      */
-    public function __construct(
-        public string $id = '', 
-        public string $name = '',
-        public string $value = '',
-        public string $placeholder = '',
-        public string $class = '',
-        ){}
+    public function __construct()
+    {
+        //
+    }
 
     /**
      * Get the view / contents that represent the component.

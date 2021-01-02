@@ -4,9 +4,10 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
+use App\Models\Article;
+
 class ErrorCard extends Component
 {
-
     /**
      * Create a new component instance.
      *

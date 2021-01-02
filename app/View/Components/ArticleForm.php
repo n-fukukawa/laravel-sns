@@ -4,6 +4,8 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
+use App\Models\Article;
+
 class ArticleForm extends Component
 {
     /**
@@ -11,12 +13,10 @@ class ArticleForm extends Component
      *
      * @return void
      */
-    public function __construct(
-        // public string $method = '',
-        // public string $action = '',
-    ){}
-
-    
+    public function __construct(public Article $article)
+    {
+        //
+    }
 
     /**
      * Get the view / contents that represent the component.

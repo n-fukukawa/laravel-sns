@@ -1,21 +1,18 @@
-@extends('app')
+@extends('layout.app')
 
 @section('title', 'ログイン')
 
 @section('content')
-<div>
-    <h3 class="text-3xl text-center">ログイン</h3>
+<div class="mx-4 sm:w-96 sm:mx-auto">
+    <h3 class="text-xl sm:text-3xl text-center">ログイン</h3>
     <form action="{{ route('login') }}" method="POST">
         @csrf
-
-        @if($errors->any())
-        <x-error-card :errors="$errors->all()" />
-        @endif
-
+        <x-error-card/>
         <x-input type="email" id="email" name="email" placeholder="メールアドレス"/>
         <x-input type="password" id="password" name="password" placeholder="パスワード"/>
-        <x-button class="block" type="submit" label="ログイン" />
-        <a href="{{ route('register') }}" class="text-gray-600">初めての方はこちら</a>
+        <x-button class="block mt-4" type="submit">ログイン</x-button>
+        <a href="{{ route('password.request') }}" class="block mt-4 text-gray-600">パスワードを忘れましたか？</a>
+        <a href="{{ route('register') }}" class="block mt-4 text-gray-600">初めての方はこちら</a>
     </form>
 </div>
 @endsection

@@ -8,15 +8,15 @@ use App\Models\Article;
 
 class Card extends Component
 {
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(
-        public $item,
-    ){}
+    public function __construct(public Article $article)
+    {
+        //
+    }
 
     /**
      * Get the view / contents that represent the component.

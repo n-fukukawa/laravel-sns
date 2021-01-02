@@ -1,11 +1,11 @@
-@extends('app')
+@extends('layout.app')
 @section('title', '記事投稿')
 @section('content')
     <div>
         <form method="POST" action="{{ route('articles.store') }}">
             @csrf
-            <x-article-form />
-            <x-button type="submit" label="投稿する" class="mt-8"/>
+            <x-article-form/>
+            <x-button type="submit" href="google.com" class="bg-red-500 mt-8">投稿する</x-button>
         </form>
     </div>
 @endsection
