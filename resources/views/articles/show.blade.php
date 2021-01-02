@@ -4,9 +4,7 @@
 
 @section('content')
 <div>
-    @foreach ($articles as $article)
-        <x-card :article="$article" class="mt-8"/>
-    @endforeach
+    <x-card :article="$article" class="mt-8"/>
 </div>
 @endsection
 

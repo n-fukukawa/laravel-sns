@@ -6,17 +6,15 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(
-        public string $type = '',
-        public string $label = '',
-        public string $class = '',
-    ){}
+    public function __construct()
+    {
+        //
+    }
 
     /**
      * Get the view / contents that represent the component.

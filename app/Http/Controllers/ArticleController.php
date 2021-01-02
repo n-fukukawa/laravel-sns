@@ -10,6 +10,10 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Article::class, 'article');
+    }
     public function index(){
 
         $articles = Article::all()->sortByDesc('created_at');
@@ -39,6 +43,17 @@ class ArticleController extends Controller
     public function update(ArticleRequest $request, Article $article)
     {
         $article->fill($request->all())->save();
+        return redirect()->route('articles.index');
+    }
+
+    public function show(ArticleController $request, Article $article)
+    {
+        return view('articles.show', ['article' => $article]);
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
         return redirect()->route('articles.index');
     }
 }
