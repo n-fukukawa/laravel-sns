@@ -4,7 +4,7 @@
     <div>
         <form method="POST" action="{{ route('articles.store') }}">
             @csrf
-            <x-article-form/>
+            @include('articles.article-form')
             <x-button type="submit" href="google.com" class="bg-red-500 mt-8">投稿する</x-button>
         </form>
     </div>

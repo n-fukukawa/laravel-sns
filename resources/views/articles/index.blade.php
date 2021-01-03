@@ -5,7 +5,7 @@
 @section('content')
 <div>
     @foreach ($articles as $article)
-        <x-card :article="$article" class="mt-8"/>
+        @include('components.card')
     @endforeach
 </div>
 @endsection

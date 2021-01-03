@@ -4,7 +4,7 @@
 
 @section('content')
 <div>
-    <x-card :article="$article" class="mt-8"/>
+    @include('components.card')
 </div>
 @endsection
 

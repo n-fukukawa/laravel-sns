@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <x-nav />
+        @include('layout.nav')
     </header>
     <main>
         <div id="app" class="container mx-auto">

@@ -8,12 +8,14 @@ use App\Models\Article;
 
 class ArticleForm extends Component
 {
+
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public Article $article)
+    public function __construct()
     {
         //
     }
