@@ -16,7 +16,7 @@
                 <form id="logout-button" method="POST" action="{{ route('logout') }}">
                     @csrf
                 </form>
-                {{-- <li><a class="inline-block py-4" href="">●</a></li> --}}
+                <li><a class="inline-block py-4" href="{{ route('users.show', ["name" => Auth::user()->name]) }}">マイページ</a></li>
             @endauth
         </ul>
     </nav>

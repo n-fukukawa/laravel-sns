@@ -26,6 +26,11 @@ class Article extends Model
         return $this->belongsToMany('App\Models\User', 'likes')->withTimestamps();
     }
 
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany('App\Models\Tag')->withTimestamps();
+    }
+
     public function isLikedBy(?User $user): bool
     {
         return $user

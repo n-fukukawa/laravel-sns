@@ -5,6 +5,12 @@
 @section('content')
 <div class="mx-4 sm:w-96 sm:mx-auto">
     <h3 class="text-xl sm:text-3xl text-center">ログイン</h3>
+    <a href="{{ route('login.{provider}', ['provider' => 'google']) }}"
+        class="block p-2 bg-blue-400 text-center text-white"
+        >
+        <i class="fab fa-google mr-1"></i>
+        Googleでログイン
+    </a>
     <form action="{{ route('login') }}" method="POST">
         @csrf
         <x-error-card/>
